@@ -1,0 +1,1 @@
+controller_joint_names: ['head_joint', 'left_arm1_joint', 'left_arm2_joint', 'left_arm3_joint', 'right_arm1_joint', 'right_arm2_joint', 'right_arm3_joint', 'left_leg1_joint', 'left_leg2_joint', 'left_leg3_joint', 'left_leg4_joint', 'left_leg5_joint', 'right_leg1_joint', 'right_leg2_joint', 'right_leg3_joint', 'right_leg4_joint', 'right_leg5_joint', ]

@@ -1,0 +1,1036 @@
+<?xml version="1.0" ?>
+<robot
+  name="yanshee">
+  <link name="world"/>
+  <joint name="world_joint" type="fixed">
+  <parent link="world"/>
+  <child link="base_link"/>
+  <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.28"/>
+  </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00671487104263047 -0.000225582019654342 -0.0079919194119481"
+        rpy="0 0 0" />
+      <mass
+        value="1.0296612030539" />
+      <inertia
+        ixx="0.00180022359518362"
+        ixy="1.1918387954471E-07"
+        ixz="-5.28660375448492E-05"
+        iyy="0.00176811056794777"
+        iyz="1.82106435044606E-06"
+        izz="0.00168298836267856" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="head_Link">
+    <inertial>
+      <origin
+        xyz="-0.0107920940962409 7.80887188769389E-05 0.00228460765430599"
+        rpy="0 0 0" />
+      <mass
+        value="0.0931744907520849" />
+      <inertia
+        ixx="2.05515448473376E-05"
+        ixy="2.15071905057931E-08"
+        ixz="2.68261333173558E-06"
+        iyy="4.973230871684E-05"
+        iyz="1.39655887082477E-09"
+        izz="5.02600433533246E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/head_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/head_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.00014945 0.06"
+      rpy="1.1949E-16 -1.7338E-16 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="head_Link" />
+    <axis
+      xyz="-0.00044678 -0.0035302 0.99999" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="1"
+      velocity="10" />
+  </joint>
+  <link
+    name="left_arm1_Link">
+    <inertial>
+      <origin
+        xyz="5.14775840678994E-05 -9.5842284426495E-05 -0.0118303086559914"
+        rpy="0 0 0" />
+      <mass
+        value="0.0136649272424537" />
+      <inertia
+        ixx="2.3634868988607E-06"
+        ixy="-2.43828126653101E-12"
+        ixz="2.57000691024144E-10"
+        iyy="5.47215996034315E-06"
+        iyz="1.05376000100878E-09"
+        izz="4.66119879830543E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/left_arm1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/left_arm1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm1_joint"
+    type="revolute">
+    <origin
+      xyz="0.0030003 0.076597 0.013315"
+      rpy="-1.5708 0 1.108E-16" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_arm1_Link" />
+    <axis
+      xyz="-5.8802E-05 0 -1" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="1"
+      velocity="10" />
+  </joint>
+  <link
+    name="left_arm2_Link">
+    <inertial>
+      <origin
+        xyz="0.0186297064589019 0.000401816051501303 -0.00042578700677829"
+        rpy="0 0 0" />
+      <mass
+        value="0.0156927248264831" />
+      <inertia
+        ixx="5.6753981697414E-06"
+        ixy="4.73427409516267E-08"
+        ixz="-1.27933784616934E-07"
+        iyy="1.01425535666065E-05"
+        iyz="-5.19641927957789E-09"
+        izz="8.82186853628373E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/left_arm2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/left_arm2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm2_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="left_arm1_Link" />
+    <child
+      link="left_arm2_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="1"
+      velocity="10" />
+  </joint>
+  <link
+    name="left_arm3_Link">
+    <inertial>
+      <origin
+        xyz="0.026570274501621 9.51803753585501E-05 -0.00376690909324129"
+        rpy="0 0 0" />
+      <mass
+        value="0.0983861935013279" />
+      <inertia
+        ixx="1.95628201387486E-05"
+        ixy="-4.69255772866858E-07"
+        ixz="4.3937955466687E-07"
+        iyy="6.21429342121587E-05"
+        iyz="1.77682159194068E-08"
+        izz="6.01446819208126E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/left_arm3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/left_arm3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm3_joint"
+    type="revolute">
+    <origin
+      xyz="0.059245 0 0.00152"
+      rpy="-1.8995E-11 -0.02618 0" />
+    <parent
+      link="left_arm2_Link" />
+    <child
+      link="left_arm3_Link" />
+    <axis
+      xyz="0.026177 0 0.99966" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="1"
+      velocity="10" />
+  </joint>
+  <link
+    name="right_arm1_Link">
+    <inertial>
+      <origin
+        xyz="-5.1477587142388E-05 -9.58421639294105E-05 -0.0118303086560013"
+        rpy="0 0 0" />
+      <mass
+        value="0.0136649272424444" />
+      <inertia
+        ixx="2.36348689889869E-06"
+        ixy="2.43827204007905E-12"
+        ixz="-2.57000159418442E-10"
+        iyy="5.4721599603395E-06"
+        iyz="1.05373950042753E-09"
+        izz="4.66119879834388E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/right_arm1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/right_arm1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm1_joint"
+    type="revolute">
+    <origin
+      xyz="0.0030003 -0.077273 0.013316"
+      rpy="1.5708 0 -3.9868E-19" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_arm1_Link" />
+    <axis
+      xyz="-5.9268E-05 0 1" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="1"
+      velocity="10" />
+  </joint>
+  <link
+    name="right_arm2_Link">
+    <inertial>
+      <origin
+        xyz="0.0186297095059434 0.000401688645375403 0.000425917718280107"
+        rpy="0 0 0" />
+      <mass
+        value="0.0156926956999585" />
+      <inertia
+        ixx="5.67540894238038E-06"
+        ixy="4.73622619858288E-08"
+        ixz="1.27913953578669E-07"
+        iyy="1.01425587967183E-05"
+        iyz="5.14556186469705E-09"
+        izz="8.82187996580289E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/right_arm2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/right_arm2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm2_joint"
+    type="revolute">
+    <origin
+      xyz="-9.961E-05 0 0"
+      rpy="1.5708 0 -1.5708" />
+    <parent
+      link="right_arm1_Link" />
+    <child
+      link="right_arm2_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="1"
+      velocity="10" />
+  </joint>
+  <link
+    name="right_arm3_Link">
+    <inertial>
+      <origin
+        xyz="0.026659702183302 9.51783873687356E-05 0.00307009292755899"
+        rpy="0 0 0" />
+      <mass
+        value="0.0983852869739852" />
+      <inertia
+        ixx="1.95671253596984E-05"
+        ixy="-4.69557130988975E-07"
+        ixz="6.23165184228249E-07"
+        iyy="6.2142544545993E-05"
+        iyz="-5.47676812377141E-09"
+        izz="6.01395038406066E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/right_arm3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/right_arm3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm3_joint"
+    type="revolute">
+    <origin
+      xyz="0.059245 0 -0.00152"
+      rpy="1.9539E-11 4.4108E-12 0" />
+    <parent
+      link="right_arm2_Link" />
+    <child
+      link="right_arm3_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="1"
+      velocity="10" />
+  </joint>
+  <link
+    name="left_leg1_Link">
+    <inertial>
+      <origin
+        xyz="0.0218793806245584 0.000461528315038338 0.000437328945235152"
+        rpy="0 0 0" />
+      <mass
+        value="0.0156559636608665" />
+      <inertia
+        ixx="4.47155922341706E-06"
+        ixy="-1.77585864343584E-07"
+        ixz="1.75175041214978E-07"
+        iyy="4.61839887541924E-06"
+        iyz="3.15996181844891E-09"
+        izz="4.6159043452499E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/left_leg1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/left_leg1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_leg1_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0091403 0.02816 -0.065928"
+      rpy="-1.5708 1.5708 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_leg1_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_leg2_Link">
+    <inertial>
+      <origin
+        xyz="0.0255864571187106 -0.0108509305854525 0.00101864247275891"
+        rpy="0 0 0" />
+      <mass
+        value="0.107715150230029" />
+      <inertia
+        ixx="3.38164419926127E-05"
+        ixy="1.23153518587689E-05"
+        ixz="4.6194211271192E-07"
+        iyy="5.78640129364067E-05"
+        iyz="2.74795544044712E-07"
+        izz="6.64839927510415E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/left_leg2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/left_leg2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_leg2_joint"
+    type="fixed">
+    <origin
+      xyz="0.0438 0 0"
+      rpy="1.5708 0 -6.8049E-07" />
+    <parent
+      link="left_leg1_Link" />
+    <child
+      link="left_leg2_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_leg3_Link">
+    <inertial>
+      <origin
+        xyz="0.0407946525783551 2.00999895415663E-05 0.000215900493275946"
+        rpy="0 0 0" />
+      <mass
+        value="0.0769705912620037" />
+      <inertia
+        ixx="2.01778905647826E-05"
+        ixy="3.24770412009536E-09"
+        ixz="-5.11455121015069E-08"
+        iyy="3.91841731233319E-05"
+        iyz="1.50114743011987E-09"
+        izz="3.21700138167598E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/left_leg3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/left_leg3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_leg3_joint"
+    type="fixed">
+    <origin
+      xyz="0.049876 0 1.4223E-05"
+      rpy="-1.6653E-16 -1.0793E-06 0" />
+    <parent
+      link="left_leg2_Link" />
+    <child
+      link="left_leg3_Link" />
+    <axis
+      xyz="0.13975 -0.99019 0" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_leg4_Link">
+    <inertial>
+      <origin
+        xyz="0.0339764234951882 0.00157592235510815 0.000681683144300838"
+        rpy="0 0 0" />
+      <mass
+        value="0.0377470338040459" />
+      <inertia
+        ixx="9.3959305666122E-06"
+        ixy="-1.9874023770476E-07"
+        ixz="-6.9333960599869E-08"
+        iyy="6.29756290524162E-06"
+        iyz="2.15786874188445E-07"
+        izz="9.74973254351289E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/left_leg4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/left_leg4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_leg4_joint"
+    type="fixed">
+    <origin
+      xyz="0.059245 1.5251E-05 0"
+      rpy="1.5714 -0.00046343 0" />
+    <parent
+      link="left_leg3_Link" />
+    <child
+      link="left_leg4_Link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_leg5_Link">
+    <inertial>
+      <origin
+        xyz="0.0196730138540844 -0.0233092637107096 -0.00142039915584111"
+        rpy="0 0 0" />
+      <mass
+        value="0.180693448780151" />
+      <inertia
+        ixx="0.000286904706763416"
+        ixy="4.85308988509185E-07"
+        ixz="3.08612201699753E-08"
+        iyy="0.000209961688550046"
+        iyz="2.86937724081844E-10"
+        izz="0.000102539066831567" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/left_leg5_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/left_leg5_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_leg5_joint"
+    type="fixed">
+    <origin
+      xyz="0.03699 -0.0088627 0"
+      rpy="3.1416 -9.9825E-06 0" />
+    <parent
+      link="left_leg4_Link" />
+    <child
+      link="left_leg5_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_leg1_Link">
+    <inertial>
+      <origin
+        xyz="0.0218793806256354 0.000461528344157129 -0.00043732892343204"
+        rpy="0 0 0" />
+      <mass
+        value="0.0156559636636307" />
+      <inertia
+        ixx="4.47155922610687E-06"
+        ixy="-1.77585863984461E-07"
+        ixz="-1.75175041026435E-07"
+        iyy="4.61839888466442E-06"
+        iyz="-3.15996305903733E-09"
+        izz="4.61590434363492E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/right_leg1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/right_leg1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_leg1_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0091403 -0.028469 -0.066034"
+      rpy="-1.5708 1.5708 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_leg1_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_leg2_Link">
+    <inertial>
+      <origin
+        xyz="0.0248207221657579 0.0125036435026244 0.00101864810052388"
+        rpy="0 0 0" />
+      <mass
+        value="0.107715237159741" />
+      <inertia
+        ixx="3.55296285133566E-05"
+        ixy="-1.37815242878706E-05"
+        ixz="4.78946454291171E-07"
+        iyy="5.61509322467855E-05"
+        iyz="-2.43945783167363E-07"
+        izz="6.64840036459698E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/right_leg2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/right_leg2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_leg2_joint"
+    type="fixed">
+    <origin
+      xyz="0.0438 0 0"
+      rpy="1.5708 0 -6.8037E-07" />
+    <parent
+      link="right_leg1_Link" />
+    <child
+      link="right_leg2_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_leg3_Link">
+    <inertial>
+      <origin
+        xyz="0.0407948464152487 -2.01710272295947E-05 0.000215807538541168"
+        rpy="0 0 0" />
+      <mass
+        value="0.0769703186436065" />
+      <inertia
+        ixx="2.01778686734398E-05"
+        ixy="-3.2266132479563E-09"
+        ixz="-5.14487015473355E-08"
+        iyy="3.91833919170359E-05"
+        iyz="3.83742815950406E-09"
+        izz="3.21693080984243E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/right_leg3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/right_leg3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_leg3_joint"
+    type="fixed">
+    <origin
+      xyz="0.049769 0.0032671 1.4223E-05"
+      rpy="-0.00076321 -1.0794E-06 0" />
+    <parent
+      link="right_leg2_Link" />
+    <child
+      link="right_leg3_Link" />
+    <axis
+      xyz="0 0.0007632 -1" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_leg4_Link">
+    <inertial>
+      <origin
+        xyz="0.0339764646323713 0.000681371450579888 0.00157592285558581"
+        rpy="0 0 0" />
+      <mass
+        value="0.0377471105564984" />
+      <inertia
+        ixx="9.39595739028984E-06"
+        ixy="-6.93417906435305E-08"
+        ixz="-1.98734856222991E-07"
+        iyy="9.74975907787965E-06"
+        iyz="2.15816104840149E-07"
+        izz="6.29758000243913E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/right_leg4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/right_leg4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_leg4_joint"
+    type="fixed">
+    <origin
+      xyz="0.059245 -1.5243E-05 -1.0003E-05"
+      rpy="2.181E-09 1.1024E-06 0" />
+    <parent
+      link="right_leg3_Link" />
+    <child
+      link="right_leg4_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_leg5_Link">
+    <inertial>
+      <origin
+        xyz="0.0196728894917525 -0.0233093361989681 0.00142044913562242"
+        rpy="0 0 0" />
+      <mass
+        value="0.180690409171148" />
+      <inertia
+        ixx="0.000286894196605779"
+        ixy="4.85195544577275E-07"
+        ixz="-3.07943743530547E-08"
+        iyy="0.000209955979974034"
+        iyz="-1.37393316499492E-09"
+        izz="0.000102534173179187" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/right_leg5_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://yanshee/meshes/right_leg5_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_leg5_joint"
+    type="fixed">
+    <origin
+      xyz="0.03699 0 -0.0088627"
+      rpy="-1.5708 0 1.8708E-08" />
+    <parent
+      link="right_leg4_Link" />
+    <child
+      link="right_leg5_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.58"
+      upper="1.58"
+      effort="1"
+      velocity="10" />
+  </joint>
+</robot>

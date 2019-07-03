@@ -1,0 +1,56 @@
+yanshee:
+# Position Controllers ---------------------------------------
+  head_position_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 100
+
+  left_arm1_position_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 100
+  left_arm2_position_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 100
+  left_arm1_position_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 100
+  right_arm1_position_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 100
+  right_arm2_position_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 100
+  right_arm3_position_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 100
+
+  #left_leg1_position_controller:
+    #type: joint_state_controller/JointStateController
+    #publish_rate: 100
+  #left_leg2_position_controller:
+    #type: joint_state_controller/JointStateController
+    #publish_rate: 100
+  #left_leg3_position_controller:
+    #type: joint_state_controller/JointStateController
+    #publish_rate: 100
+  #left_leg4_position_controller:
+    #type: joint_state_controller/JointStateController
+    #publish_rate: 100
+  #left_leg5_position_controller:
+    #type: joint_state_controller/JointStateController
+    #publish_rate: 100
+
+  #right_leg1_position_controller:
+    #type: joint_state_controller/JointStateController
+    #publish_rate: 100
+  #right_leg2_position_controller:
+    #type: joint_state_controller/JointStateController
+    #publish_rate: 100
+  #right_leg3_position_controller:
+    #type: joint_state_controller/JointStateController
+    #publish_rate: 100
+  #right_leg4_position_controller:
+    #type: joint_state_controller/JointStateController
+    #publish_rate: 100
+  #right_leg5_position_controller:
+    #type: joint_state_controller/JointStateController
+    #publish_rate: 100
